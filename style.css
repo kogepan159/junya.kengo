@@ -1,11 +1,13 @@
 :root {
-  --bg: #0f172a;
-  --bg-soft: #f8fafc;
-  --ink: #0f172a;
-  --ink-soft: #475569;
-  --accent: #2563eb;
-  --accent-soft: #dbeafe;
-  --border: #e2e8f0;
+  --bg: #1f1608;
+  --bg-soft: #fdfaf5;
+  --ink: #241c10;
+  --ink-soft: #6b6255;
+  --accent: #faa500;
+  --accent-soft: #ffedc2;
+  --accent-secondary: #54a84b;
+  --accent-secondary-soft: #dff0dc;
+  --border: #ece4d4;
   --card-bg: #ffffff;
   --max-width: 960px;
 }
@@ -34,7 +36,7 @@ a {
 /* Hero */
 
 .hero {
-  background: radial-gradient(circle at top left, #1e3a8a, var(--bg) 60%);
+  background: radial-gradient(circle at top left, #7a4a00, var(--bg) 60%);
   color: #fff;
   padding-bottom: 4rem;
 }
@@ -60,7 +62,7 @@ a {
 }
 
 .nav-links a {
-  color: #cbd5e1;
+  color: #e8dcc6;
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -81,7 +83,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   object-position: center 30%;
-  border: 3px solid rgba(255, 255, 255, 0.4);
+  border: 3px solid var(--accent-secondary);
   margin-bottom: 1.5rem;
 }
 
@@ -89,7 +91,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.8rem;
-  color: #93c5fd;
+  color: #ffd482;
   margin-bottom: 0.75rem;
 }
 
@@ -103,12 +105,12 @@ a {
 .hero-content h1 span {
   font-size: 1.1rem;
   font-weight: 400;
-  color: #cbd5e1;
+  color: #e8dcc6;
   letter-spacing: 0.05em;
 }
 
 .tagline {
-  color: #e2e8f0;
+  color: #f1e9d8;
   max-width: 32rem;
   margin: 1.25rem 0 2rem;
 }
@@ -134,7 +136,7 @@ a {
 }
 
 .btn-outline {
-  border: 1px solid #93c5fd;
+  border: 1px solid #ffd482;
   color: #fff;
 }
 
@@ -178,6 +180,7 @@ main {
   margin-top: 2rem;
   background: var(--card-bg);
   border: 1px solid var(--border);
+  border-left: 4px solid var(--accent-secondary);
   border-radius: 12px;
   padding: 1.5rem;
 }
@@ -344,7 +347,7 @@ main {
 
 .badges li {
   background: var(--accent-soft);
-  color: #1d4ed8;
+  color: #8a5a00;
   border-radius: 999px;
   padding: 0.5rem 1.1rem;
   font-size: 0.85rem;
@@ -428,7 +431,7 @@ main {
 }
 
 .form-status-success {
-  color: #15803d;
+  color: var(--accent-secondary);
 }
 
 .form-status-error {
@@ -467,10 +470,6 @@ main {
 @media (max-width: 640px) {
   .hero-content h1 {
     font-size: 1.9rem;
-  }
-
-  .cta {
-    padding: 2rem 1.25rem;
   }
 
   .footer {
