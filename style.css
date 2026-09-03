@@ -1,0 +1,413 @@
+:root {
+  --bg: #0f172a;
+  --bg-soft: #f8fafc;
+  --ink: #0f172a;
+  --ink-soft: #475569;
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+  --border: #e2e8f0;
+  --card-bg: #ffffff;
+  --max-width: 960px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--bg-soft);
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  line-height: 1.4;
+  margin: 0 0 0.6em;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* Hero */
+
+.hero {
+  background: radial-gradient(circle at top left, #1e3a8a, var(--bg) 60%);
+  color: #fff;
+  padding-bottom: 4rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 0;
+}
+
+.nav-name {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.hero-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 0;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: #93c5fd;
+  margin-bottom: 0.75rem;
+}
+
+.hero-content h1 {
+  font-size: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hero-content h1 span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #cbd5e1;
+  letter-spacing: 0.05em;
+}
+
+.tagline {
+  color: #e2e8f0;
+  max-width: 32rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-outline {
+  border: 1px solid #93c5fd;
+  color: #fff;
+}
+
+.btn-solid {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+}
+
+/* Main sections */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+.sub-heading {
+  font-size: 1.1rem;
+  margin-top: 2.5rem;
+}
+
+.section p {
+  color: var(--ink-soft);
+}
+
+/* About */
+
+.future {
+  margin-top: 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.future h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.future ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.future .year {
+  display: inline-block;
+  min-width: 4.5rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Skills */
+
+.skill-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.skill-grid li {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.skill-name {
+  font-weight: 700;
+}
+
+.skill-years {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.skill-note {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+}
+
+/* Timeline (career) */
+
+.timeline {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  border-left: 2px solid var(--accent-soft);
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 0 2rem 1.5rem;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timeline .date,
+.milestones .date {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.3rem;
+}
+
+.timeline h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+}
+
+.timeline p {
+  margin: 0;
+}
+
+/* Card grid (works) */
+
+.card-grid {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.card h3 {
+  font-size: 1rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Milestones */
+
+.milestones {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.milestones li {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  color: var(--ink-soft);
+}
+
+.milestones .date {
+  min-width: 5rem;
+}
+
+/* Badges */
+
+.badges {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.badges li {
+  background: var(--accent-soft);
+  color: #1d4ed8;
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Mentor CTA */
+
+.cta {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.mentor-list {
+  list-style: none;
+  margin: 1.5rem auto 2rem;
+  padding: 0;
+  max-width: 26rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.mentor-list li::before {
+  content: "・";
+  color: var(--accent);
+}
+
+/* Footer */
+
+.footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .cta {
+    padding: 2rem 1.25rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}
