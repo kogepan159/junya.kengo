@@ -141,7 +141,7 @@ a {
 }
 
 .btn-solid {
-  background: var(--accent);
+  background: var(--accent-secondary);
   color: #fff;
   border: none;
 }
