@@ -377,6 +377,90 @@ main {
   color: var(--accent);
 }
 
+/* Contact form */
+
+.contact-form {
+  max-width: 32rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hidden-field {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.badge-required,
+.badge-optional {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+}
+
+.badge-required {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge-optional {
+  background: var(--border);
+  color: var(--ink-soft);
+}
+
+.form-row input,
+.form-row textarea {
+  font: inherit;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--ink);
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+}
+
+.form-status {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.form-status-success {
+  color: #15803d;
+}
+
+.form-status-error {
+  color: #b91c1c;
+}
+
 /* Footer */
 
 .footer {
