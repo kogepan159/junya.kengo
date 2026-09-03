@@ -75,6 +75,16 @@ a {
   padding: 4rem 1.5rem 0;
 }
 
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 1.5rem;
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.15em;
